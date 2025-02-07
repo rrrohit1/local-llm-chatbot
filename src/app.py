@@ -1,7 +1,9 @@
 import gradio as gr
+from utils import chat_with_model
 
 def chat_response(user_input):
-    return user_input.lower()
+    # return user_input.lower() # Uncomment this line to see the user input echoed back
+    return chat_with_model(user_input)
 
 with gr.Blocks() as demo:
     gr.Markdown("# Simple Chat App")
